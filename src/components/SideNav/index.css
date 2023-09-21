@@ -1,0 +1,21 @@
+.row_nosence {
+    text-align: center;
+    padding-right: 15px;
+    padding-left: 15px;
+    grid-area: nav;
+    background-color: #f9f9f9;
+}
+
+.react-aside {
+    height: 100%;
+    background-color: #2b2f3e;
+    padding: 10px;
+}
+
+.react-aside>h2 {
+    color: #f9f9f9;
+}
+
+.aside_text {
+    color: #645050
+}
