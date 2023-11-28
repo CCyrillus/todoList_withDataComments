@@ -2,19 +2,23 @@
 import './App.css';
 import SideNavigation from "./components/SideNav/index.js";
 import ItemComponent from './components/ItemComponent';
+import { HashRouter } from 'react-router-dom';
 
 function App() {
 
   return (
-    <div className="react-app container-fluid">
-      <div className="row">
+    <HashRouter basename={process.env.PUBLIC_URL}>
+      <div className="react-app container-fluid">
+        <div className="row">
 
-        <SideNavigation />
+          <SideNavigation />
 
-        <ItemComponent />
+          <ItemComponent />
 
+        </div>
       </div>
-    </div>
+    </HashRouter>
+
   );
 }
 

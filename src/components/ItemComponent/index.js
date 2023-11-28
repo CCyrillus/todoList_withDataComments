@@ -23,8 +23,8 @@ const ItemComponent = () => {
             value: newItem,
             array: [],
         };
-        
-            setItems(oldList => [...oldList, item]);
+
+        setItems(oldList => [...oldList, item]);
         setNewItem("");
 
         if (items.length < 1) {
@@ -37,6 +37,7 @@ const ItemComponent = () => {
         if (id === selectedItemId) {
             setSelectedItemId(null);
         }
+
         if (items.length > 0) {
             setSelectedItemId(items[0].id);
         }
@@ -64,9 +65,12 @@ const ItemComponent = () => {
         if (items.length === 1) {
             setSelectedItemId(items[0].id);
         }
-
         setNewComment("");
         setColour("#000000");
+        
+        if (items.length < 1) {
+            setSelectedItemId(null);
+        }
 
     }, [items, selectedItemId]);
 
@@ -135,7 +139,7 @@ const ItemComponent = () => {
                                 id="head"
                                 name="head"
                                 onChange={e => setColour(e.target.value)}
-                                
+
                             />
                             <textarea
                                 className='box_comments-textArea'
